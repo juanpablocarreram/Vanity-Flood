@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Pacifico&family=Ultra&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Archivo Black", sans-serif;
+}
+
+body {
+    min-height: 200vh;
+    background-color: black;
+}
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.triangle {
+    top: 0;
+    position: absolute;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    background: radial-gradient(black, rgb(46, 46, 46));
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(180deg);
+    overflow: hidden;
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20%;
+}
+
+.triangle>* {
+    transform: rotateZ(-180deg);
+
+}
+
+.title {
+    position: absolute;
+    letter-spacing: min(.4vw, .4vh);
+}
+
+.titleVanity {
+    bottom: 24%;
+    color: white;
+    font-size: 8vw;
+    transform-origin: bottom;
+    ;
+    font-weight: 900;
+    color: white;
+}
+
+.titleFlow {
+    bottom: max(21%, 23vh);
+    color: rgb(255, 3, 238);
+    font-size: 5vw;
+    text-shadow: 0px 0px 1px rgb(255, 3, 238);
+}
+@media only screen and (max-width:601px){
+    .titleVanity {
+        
+        font-size: 15vw;
+    }
+    
+    .titleFlow {
+        font-size: 10vw;
+    }
+}
+.circleShadow {
+    border-radius: 50%;
+    background-color: rgb(255, 3, 238);
+    width: 20%;
+    height: 40%;
+    position: absolute;
+    top: -20%;
+    filter: blur(1000px);
+    animation: moveShadow 1s ease;
+}
+
+.boxImage {
+    z-index: 5;
+    width: 50%;
+    height: 100%;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    position: absolute;
+    background: radial-gradient(white,rgb(222, 221, 221));
+    overflow: hidden;
+}
+
+.leftImagesBox {
+    bottom: 0;
+    left: 0;
+    
+}
+
+.rightImagesBox {
+    bottom: 0;
+    right: 0;
+    transform: rotateY(180deg);
+}
+
+.imageFlex {
+    width: 300%;
+    height: 23%;
+    position: absolute;
+    background: transparent;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    transform: rotateZ(45deg) translateX(0px);
+    gap: 20px;
+    left: -100%;
+    top:60%;
+}
+.imageFlex2 {
+    width: 300%;
+    height: 23%;
+    position: absolute;
+    background: transparent;
+    bottom: 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    transform: rotateZ(45deg) translateX(0px);
+    left: -100%;
+    top:110%;
+    gap: 20px
+}
+.imageElement{
+    width:100%;
+    height:100%;
+}
+/* IPad Pro */
+@media only screen and (width:1024px) and (height:1366px){
+    .imageFlex{
+        transform: rotateZ(65deg);
+        height:5%;
+        width:450%;
+        left: -180%;
+        top:60%;
+    }
+    .imageFlex2{
+        transform: rotateZ(65deg);
+        height:5%;
+        width:450%;
+        left: -180%;
+        top:110%;
+    }  
+}
+/* End IPad Pro */
+
+
+  @media only screen and (max-width:901px){
+.imageFlex{
+    transform: rotateZ(65deg);
+    height:15%;
+    width:450%;
+    left: -180%;
+    top:60%;
+}
+.imageFlex2{
+    transform: rotateZ(65deg);
+    height:15%;
+    width:450%;
+    left: -180%;
+    top:110%;
+}  
+}
+
+
+@media only screen and (max-width:901px){
+.imageFlex{
+    transform: rotateZ(65deg);
+    height:15%;
+    width:450%;
+    left: -180%;
+    top:60%;
+}
+.imageFlex2{
+    transform: rotateZ(65deg);
+    height:15%;
+    width:450%;
+    left: -180%;
+    top:110%;
+}
+}
+
+@media only screen and (max-width:501px){
+    .imageFlex{
+     width:450%;
+     height:10%;
+     transform:rotateZ(65deg);
+    }
+    .imageFlex2{
+width:450%;
+height:10%;
+transform:rotateZ(65deg);
+    }
+    }
+
+.image {
+    overflow: hidden;
+    height: 100%;
+    flex: 1;
+    border-radius: 10%;
+}
+
+
+
+@keyframes moveShadow {
+    from {
+        top: -100%;
+
+    }
+
+    to {
+        top: -20%;
+
+    }
+}
